@@ -17,4 +17,16 @@
              shouldCacheTarget:NO];
 }
 
+- (UIViewController *)B_viewControllerWithContentText:(NSString *)contentText {
+    
+    NSDictionary *params = @{
+                             @"contentText" : contentText
+                             };
+    
+    return [self performTarget:@"B"
+                        action:@"viewController"
+                        params:params
+             shouldCacheTarget:NO];
+}
+
 @end
